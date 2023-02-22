@@ -41,11 +41,13 @@ client.on("messageCreate", (msg) => {
   if (command === "ping") {
     client.commands.get("ping").execute(msg, args);
   } else if (command === "google") {
-    msg.reply("https://www.youtube.com");
+    msg.reply("https://www.google.com");
+  } else if (command === "fuel") {
+    client.commands.get('fuel').execute(client)
   }
 });
 
-let scheduledMessage = new cron.CronJob("*/5 * * * * *", () => {
+let scheduledMessage = new cron.CronJob("0 */2 * * *", () => {
   client.commands.get('fuel').execute(client)
 });
 
