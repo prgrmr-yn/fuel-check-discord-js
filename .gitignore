@@ -1,0 +1,4 @@
+.env
+node_modules
+fuel.js
+get_data.js
