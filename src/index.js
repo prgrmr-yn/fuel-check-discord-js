@@ -47,7 +47,7 @@ client.on("messageCreate", (msg) => {
   }
 });
 
-let scheduledMessage = new cron.CronJob("*/29 * * * *", () => {
+let scheduledMessage = new cron.CronJob("*/35 * * * *", () => {
   client.commands.get('fuel').execute(client)
 });
 
