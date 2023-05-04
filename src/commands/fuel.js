@@ -21,11 +21,11 @@ module.exports = {
     getUser()
 
     function logg(prices) {
-      let [e10, ulp91, ulp95, ulp98, diesel, lpg ] = prices
       prices.forEach(priceObj => {
         let channel = client.channels.cache.get(process.env[priceObj.type])
         channel.send({
-          content: `${priceObj.price}`
+          content: `${priceObj.price} ${priceObj.suburb}${priceObj.state}
+          lat:${priceObj.lat} lng: ${priceObj.lng}`
         })
       });
     }
