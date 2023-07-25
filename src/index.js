@@ -40,8 +40,6 @@ client.on("messageCreate", (msg) => {
 
   if (command === "ping") {
     client.commands.get("ping").execute(msg, args);
-  } else if (command === "google") {
-    msg.reply("https://www.google.com");
   } else if (command === "fuel") {
     client.commands.get('fuel').execute(client)
   }
